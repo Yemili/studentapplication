@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loginForm</title>
+    <style>
+    /* General Body Style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Form Container Styling */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+/* Label Styling */
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Input Field Styling */
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* Focus Effect for Input Fields */
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Submit Button Styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Error Message Styling */
+div {
+    margin-top: 10px;
+    color: red;
+    font-size: 14px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+    <h1 id="myheader" >Login</h1>
+   
+     <form action="/view/loginForm" method="post">
+            <label for="username">UserName</label>
+            <input type="text" id="name"  name="name" required autocomplete="new-name"><br>
+           
+            <label for="password">Password</label>
+            <input type="password" id="password"  name="password" required autocomplete="new-password"><br>
+     
+     
+    <button type="submit">Submit </button>
+</form>
+<div th:if="${error}" style="color: red;">
+        <p th:text="${error}"></p>
+    </div>
+  
+</body>
+</html>
