@@ -1,6 +1,6 @@
 
 # School Management System 
-## Technologies: Java, Springboot, Thymeleaf, Mysql
+## Technologies: Java, Springboot, Thymeleaf, Mysql, Docker, Git
 ## Dependencies  
 ### For Spring boot dependencies
 - spring-boot-starter-data-jpa: which is used for managing and accessing data between java objects and database.
@@ -20,4 +20,23 @@
   - Session Management: WIP 
 - View Profile
 - View Academic Details
-- Edit Profile	
+- Edit Profile
+
+## Docker
+- Install the docker
+- Create docker file
+- Build docker image:docker build -t your-app-name
+- Run docker container:docker run -p 8080:8080 your-app-name
+## GitPackages
+-Instead of pushing docker inmages in git,we can push it in gitpackages.
+## GitHub Actions
+-The project includes a GitHub Actions workflow for CI/CD automation: 
+-Builds the application
+-Runs tests
+-Deploys the Docker image 
+  -Workflow File: .github/workflows/ci-cd.yml
+##How to Contribute
+-Fork the repository
+-Create a feature branch
+-Commit your changes
+-Open a pull request
