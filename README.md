@@ -55,7 +55,7 @@
 - Runs tests
 - Deploys the Docker image 
 - Workflow File: .github/workflows/ci-cd.yml
-## How to Contribute
+### How to Contribute
 - Fork the repository
 - Create a feature branch
 - Commit your changes
