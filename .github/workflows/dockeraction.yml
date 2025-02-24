@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      packages: write  # Required for pushing to GitHub Package
+      packages: write  # Required for pushing to GitHub Packages
     
     steps:
       - name: Checkout Repository
